@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-12T22:04:32 EDT" name="Default suite" finished-at="2023-09-12T22:04:32 EDT" duration-ms="44">
+    <groups>
+    </groups>
+    <test started-at="2023-09-12T22:04:32 EDT" name="Default test" finished-at="2023-09-12T22:04:32 EDT" duration-ms="44">
+      <class name="streamExamples.A_ApreRequisite">
+        <test-method signature="valueStored()[pri:0, instance:streamExamples.A_ApreRequisite@865dd6]" started-at="2023-09-12T22:04:32 EDT" name="valueStored" finished-at="2023-09-12T22:04:32 EDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- valueStored -->
+      </class> <!-- streamExamples.A_ApreRequisite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,3 @@
+Create an array and store values inside it. To display the values inside this array, one has to loop.
+and if you try to print out the name of the array you get some strange alpha numerical value. so, now
+check if this is the same for an arraylist (and ?). Explore such possibilities .

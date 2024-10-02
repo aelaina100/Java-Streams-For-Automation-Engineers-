@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-01T13:02:30 EDT" name="Default suite" finished-at="2024-08-01T13:02:30 EDT" duration-ms="61">
+    <groups>
+    </groups>
+    <test started-at="2024-08-01T13:02:30 EDT" name="Default test" finished-at="2024-08-01T13:02:30 EDT" duration-ms="61">
+      <class name="ThisKeyword.A_demo">
+        <test-method signature="getData()[pri:0, instance:ThisKeyword.A_demo@be35cd9]" started-at="2024-08-01T13:02:30 EDT" name="getData" finished-at="2024-08-01T13:02:30 EDT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+      </class> <!-- ThisKeyword.A_demo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
