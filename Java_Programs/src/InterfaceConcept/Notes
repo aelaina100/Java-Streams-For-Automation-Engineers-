@@ -1,0 +1,48 @@
+
+	There are 2 types of .java files:
+	
+		-    .Java Class file
+		-    .Java Interface file
+------------------------------------------------------------------------------------------------------------------------------------------------------------		
+For Class:             public class something        Where it has methods that are implemented [ Have curly braces and lines of code inside of them].
+For Interface:         public interface something    Where it has methods' names only          [ Neither curly brackets, nor code inside of them = abstract methods].
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+When you create a .java interface file(s), then you've to create it's corresponding single .java class file where
+	inside the latter, there exists the key word 'implements' [implements interface...As opposed to 'extend' for inheritance].
+	
+		.This corresponding .Java class file can implement more than one interface at a time. For example (Line 3 below):-
+			
+	Line 1:	        public class Developing implements BankingClient                     OR
+	Line 2: 	    public class Developing implements DomainClient                      OR
+	Line 3:         public class Developing implements BankingClient, DomainClient
+			
+			
+				
+				In contrary, a class can only inherit from one parent: Example--------->
+				
+				public class son extends Grandfather [Grandfather is the only class one can inherit]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Now, let's say you have the following line:      public class Developing implements BankingClient, DomainClient
+
+	Then, the immediate next line inside the method, should be:-->
+	
+	Developing d= new Developing();      // Object 'd' will have an access to all unimplemented methods inside the interfaces of 'BankingClient' & 'DomainClient' and also
+	                                      // to all other methods that are present or will be created inside the 'Developing' .java class file.
+	                                      
+    However; this line instead===>:
+    
+	BankingClient bc= new Developing();   // Means that'bc' is an object that has an access to all unimplemented methods inside the 'BankingClient' interface ONLY and
+	                                        // also to all other methods that are present or will be created inside the 'Developing' .java class file.
+	
+	Or, this line instead===>            // Means that'dc' is an object that has an access to all unimplemented methods inside the 'DomainClient' interface ONLY and
+	DomainClient dc= new Developing();     // also to all other methods that are present or will be created inside the 'Developing' .java class file.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CRUCIAL:  Task #1: Observe the below line of code & draw your conclusion:===>      Boxing bo= new Sport(); 
+          Task #2: create the file(s) where the above line of code will be included.
+
+          	
+CRUCIAL:   DO the same for this line of code:                                       WebDriver driver = new ChromeDriver; 
+
+	
