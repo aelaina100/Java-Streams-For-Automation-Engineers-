@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="streamExamples.J_Streams"/>
+      <class name="streamExamples.C1_Streams_DeepDive_func"/>
+      <class name="streamExamples.K_Streams"/>
+      <class name="streamExamples.H_Streams"/>
+      <class name="streamExamples.A_ApreRequisite"/>
+      <class name="streamExamples.I_Streams"/>
+      <class name="streamExamples.O_Streams"/>
+      <class name="streamExamples.E_Streams"/>
+      <class name="streamExamples.P_Streams"/>
+      <class name="streamExamples.D_Streams"/>
+      <class name="streamExamples.B1_Streams_sorting"/>
+      <class name="streamExamples.G_Streams"/>
+      <class name="streamExamples.R_Streams"/>
+      <class name="streamExamples.F_Streams"/>
+      <class name="streamExamples.B_Streams"/>
+      <class name="streamExamples.S_Streams"/>
+      <class name="streamExamples.T_Steams"/>
+      <class name="streamExamples.A_Stream"/>
+      <class name="streamExamples.Z_final_filtering_webTable"/>
+      <class name="streamExamples.U_Streams"/>
+      <class name="streamExamples.X_Prereq_Filtering_webTable"/>
+      <class name="streamExamples.W_LocatorSill_part2"/>
+      <class name="streamExamples.Y_final_filtering_webTable"/>
+      <class name="streamExamples.D1_Streams_DeepDive_func_mult"/>
+      <class name="streamExamples.Q_CRUCIAL_Streams"/>
+      <class name="streamExamples.N_Streams"/>
+      <class name="streamExamples.M_Streams"/>
+      <class name="streamExamples.V_LocatorSkill_Part1"/>
+      <class name="streamExamples.A1_Streams_sorting"/>
+      <class name="streamExamples.L_Streams"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

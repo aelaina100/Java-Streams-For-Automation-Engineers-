@@ -1,0 +1,158 @@
+Collection classes are:  ArrayList, List, & Set.
+	data returned from a collection class can undergo aggregate operations utilizing streams.
+	This optimizes the code as compared to plain java coding  [Java streams are only applicable to collection classes].
+	
+ Optimization of the code denotes: 1- Less lines of codes ( 1 line or a maximum of 2 !).
+                                   2- Simpler logic.
+                                   
+
+ Array Vs ArrayList:
+ 	- An array is a fixed-length data structure.
+ 	- An arrayList is a variable-length collection class.
+ 	
+ 	In Java, one can't change the length of an array once created. However; arraylist can be.
+ ==============================================================================================================================================	
+ 	//size() is for arrays. Whereas length() is for Strings.
+	// Sorting can only be applied to ArrayLists.
+ ==============================================================================================================================================
+ ArrayList 2 formulas:  
+ 
+ #1: 
+	ArrayList<String> names= new ArrayList<String>();
+		names.add("Ahmad");
+		names.add("yansin");
+		names.add("Lyria");
+		names.add("adam");
+		names.add("Ansyn");
+
+#2: The simplified version:
+  List <String> names= Arrays.asList("Ahmad", "yansin", "Lyria", "adam", "Ansyn");
+  
+# 3rd additional method but only if made stream compatible: 
+
+stream.of("Ahmad", "yansin", "Lyria", "adam", "Ansyn";    which is equivalent to    names.stream()...
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+ 
+ Formula to convert an array into an arrayList:        Arrays.AsList(  )
+ 
+ Example:- Below is a declared Array (Fixed-length data structure)
+ 
+String names[]= {"Azmad","yansin","Lyria","adam","Ansyn"}; 
+//Dynamic memory allocation.Simpler format to create an array[fixed-length data structure].
+ 
+ 	/*or:  String names[]= new String[5];    // The longest 'traditional way' of creating an array.
+		names[0]= "Azmad";
+		names[1]= "yansin";
+		names[2]= "Lyria";
+		names[3]= "adam";
+    	names[4]= "Ansyn"; */ 
+  
+ Now- Assume that I want to apply streams operations on this Array. NOT POSSIBLE as Java streams only apply to collection classes(ArrayList, List,&Set).
+      Therefore, convert this array into an arrayList:--->
+                   List<String> namesList= Arrays.AsList(names);
+                                     
+=====================================================================================================================================================
+Merging of 2 arrayLists 
+
+Suppose you have an ArrayList A 'names1'  and  ArrayList B 'names2'     and you want to merge them into whole one arrayList:
+- Stream<String> combined_names= Stream.concat(names1.stream(), names2.stream());
+
+and also let's say I want to sort out this merged one whole ArrayList:
+
+combined_names.sorted();
+
+and if you want to print out this sorted merged one whole arrayList, then add:
+combined_names.sorted(). forEach(s->System.out.println(s))
+===========================================================================================================================================
+     
+     
+                                      ********************Crucial Notes********************
+  *******************Note A **     
+  
+  Notice:   
+  
+  Sring x= "words";
+  System.out.println(x);           // Output is:  words
+   
+   
+  and also notice:
+                                   
+  ArrayList<String> listy= new ArrayList<String>();
+     listy.add("Abtr");
+     listy.add("Mechanical");
+     
+     System.out.println(listy);   //Output is: [Abtr, mechanical]
+ ---------------------------------------------------------
+    In addition:  String x= listy.get(0)      // x stores "abtr"
+                  String y= listy.get(1)      // y stores "Mechanical"
+ 
+ 
+ 
+ 
+   *******************Note B **  
+  
+  Notice:
+ 
+ Int x= 16;   
+ System.out.println(x);              // Output is: 16                                     
+
+ArrayList<Integer> listy= new ArrayList<Integer>();
+     listy.add(30);
+     listy.add(31);
+     
+     System.out.println(listy);     //Output is: [30,31]   // Exact same pattern follows for integer types
+ --------------------------------------------------------     
+    In addition:   int x= listy.get(0);      // x stores 30
+                   int y= listy.get(1)       // y stores 31    
+   
+
+====================================================================================================================================================
+The terminal real-time operation of .collect(Collectors.toList())
+is itself implying that data (WebElements, strings, integers, etc.) are collected into a list type.
+
+What type of list ?
+	-A list of web elements ?      List<WebElement>
+	-A list of strings ?           List<String>
+	-A list of integers ?          List<Integer>
+
+*******************Example 1:
+
+ ArrayList<String> names= new ArrayList<String>();
+     names.add("Yany");
+     names.add("Abhijeet");
+     names.add("Rona");
+     names.add("Alekhya");
+     names.add("Rama");
+     
+	List<String> ls= names.stream().filter(s->s.endsWith("a")).map(s->s.toUpperCase()).collect(Collectors.toList());
+	// the type of 'ls' is List<String> by ONLY looking at the very above line & understanding the progression of data processing ONLY.
+*******************Example 2:
+
+List<WebElement> elements= driver.findElements(By.xpath("//tbody/tr/td[1]"));
+
+List<WebElement> newlist=  elements.stream().filter(s->s.getText().equalsIgnoreCase("TOMaTO")).collect(Collectors.toList());
+// for the very last line above, the type should be of 'WebElement', simply ONLY looking at & understanding
+// the progression of the line (step by step from intermdiary to terminal) ONLY. 100 !
+ 
+====================================================================================================================================================
+                          * A crucial illustration for advanced scripts !:-->
+
+// Assume that, the line below given- is for 5 web elements sharing the same locator:
+List<WebElement> elements= driver.findElements(By.xpath("//tbody/tr/td[1]"));
+
+elements.size(); // this line will/should return 5.
+
+List<WebElement> newlist=  elements.stream().filter(s->s.getText().equals("soup")).collect(Collectors.toList());
+//Line above: I am filtering a web element that holds the text of 'soup'  ('soup' text uniquely exists let's assume)
+
+System.out.println(newlist.size());  // you should/ will get a value of 1 (1 web elements that was filtered based on text).
+
+
+// Now: if the text of 'soup' does NOT exists at all, then the very above line should return zero
+// Explanation: the ..filter() step above is going to return 'false', so .filter()step and EVERYTHING after it,
+// is going to be treated as if it has not been written at all in the first place. so compiler will only see this:-->
+
+// List<WebElement> newlist=  elements.stream();
+// where  newlist.size();  equals ZERO       //&& elements.size(); should still / will still give you 5.
+
+===================================== Now repeat above scenario for the stream line in filtering web element testcases=============
