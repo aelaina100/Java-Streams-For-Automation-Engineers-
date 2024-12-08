@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="streamExamples.A1_Streams_sorting">
+      <class name="streamExamples.testingzzzzzzzzzzzzzzzz">
         <methods>
-          <include name="A1_Streams_sortingTest"/>
+          <include name="basics1"/>
         </methods>
-      </class> <!-- streamExamples.A1_Streams_sorting -->
+      </class> <!-- streamExamples.testingzzzzzzzzzzzzzzzz -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

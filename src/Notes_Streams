@@ -1,4 +1,31 @@
-Collection classes are:  ArrayList, List, & Set.
+Java Collections contain:
+	
+	1- List Interface. [Elements are added in order. Elements could be duplicates] // the ONLY interface allowing for duplicates.
+	 
+		Implemented by the following classes:
+			- ArrayList
+			- LinkedList
+			- Vector
+			
+	
+	2- Set Interface. [The order, in which elements are added, isn't guarenteed. Can NOT contain duplicate elements]
+	
+		Implemented by the following classes:
+		    -HashSet
+			-LinkedHashSet
+			-TreeSet
+			
+	3- Map. [For mapping keys to values. can NOT contain duplicate elements]
+	
+		Implemented by the following classes:
+		    -HashMap
+		    -LinkedHashMap
+		    -TreeMap
+		    
+ As a Java learner, you need to know Java collections to realize how effective & helpful they are !
+ *** In here, we'll focus on the collection class of "ArrayList" ***
+	
+	
 	data returned from a collection class can undergo aggregate operations utilizing streams.
 	This optimizes the code as compared to plain java coding  [Java streams are only applicable to collection classes].
 	
@@ -10,7 +37,7 @@ Collection classes are:  ArrayList, List, & Set.
  	- An array is a fixed-length data structure.
  	- An arrayList is a variable-length collection class.
  	
- 	In Java, one can't change the length of an array once created. However; arraylist can be.
+ 	In Java, one can't change the length of an array once created. However; arrayList can be.
  ==============================================================================================================================================	
  // .length() is for Strings & arrays(Fixed-length data structure) whereas; 
  // .size() is for arrayLists (variable-length collection class). 
@@ -37,11 +64,11 @@ Collection classes are:  ArrayList, List, & Set.
 		names.add("Ansyn");
 
 #2: The simplified version:
-  List <String> names= Arrays.asList("Ahmad", "yansin", "Lyria", "adam", "Ansyn");  // The
+  List <String> names= Arrays.asList("Ahmad", "yansin", "Lyria", "adam", "Ansyn");  
   
 # 3rd additional method but only if made stream compatible: 
 
-stream.of("Ahmad", "yansin", "Lyria", "adam", "Ansyn";    which is equivalent to    names.stream()...
+stream.of("Ahmad", "yansin", "Lyria", "adam", "Ansyn");    which is equivalent to    names.stream()...
 ---------------------------------------------------------------------------------------------------------------------------------------------- 
  
  Formula to convert an array into an arrayList:        Arrays.AsList(  )
@@ -58,7 +85,8 @@ String names[]= {"Azmad","yansin","Lyria","adam","Ansyn"};
 		names[3]= "adam";
     	names[4]= "Ansyn"; */ 
   
- Now- Assume that I want to apply streams operations on this Array. NOT POSSIBLE as Java streams only apply to collection classes(ArrayList, List,&Set).
+ Now- Assume that I want to apply streams operations on this Array. NOT POSSIBLE as Java streams only apply to collection classes(that implement the interfaces
+                                                                    of list, set & map).
       Therefore, convert this array into an arrayList:--->
                    List<String> namesList= Arrays.AsList(names);
                                      
@@ -169,3 +197,7 @@ System.out.println(newlist.size());  // you should/ will get a value of 1 (1 web
 // where  newlist.size();  equals ZERO       //&& elements.size(); should still / will still give you 5.
 
 ===================================== Now repeat above scenario for the stream line in filtering web element testcases=============
+***************************************************************************************************************************************************************\
+
+    =====================================================CRUCIAL Notes Below ===============================================================================
+    

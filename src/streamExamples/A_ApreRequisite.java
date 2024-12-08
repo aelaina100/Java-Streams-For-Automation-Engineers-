@@ -6,7 +6,7 @@ import org.junit.Assert;
 /*      ******** Note: BEFORE delving into this .java class file, review 'NOTES' file under this 'streamStuff project'.*******
  DO not proceed reviewing this class before doing so with the 'NOTES' file.
  +This file presumes that reader is already well-versed with the examples under 'JavaPkg' situated under the project of 'Java_Programs'
- This specific .java class file utilizes TestNg compiler. This is to have as many testcases inside it instead of seperate creation
+ This specific .java class file utilizes TestNg compiler. This is to have as many testcases inside it instead of separate creation
  of each testcase utilizing the plain by-default Java compiler. These are merly prerequisite testcases intended to exist in one.java 
  class file for the sake of simplicity.
  */
