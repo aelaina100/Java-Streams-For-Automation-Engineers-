@@ -16,7 +16,7 @@ public class O_Streams {
 		names1.stream().filter(s->s.endsWith("n")).map(s->s.toUpperCase()).sorted();
 	// Above line NEVER EVER modifies the source 'names1'. Hence- In 2nd line below 'names1' is ALWAYS the original list of "ahmad","Yansin",&"Jen".
 		
-		List<String> names2=  Arrays.asList("Adam", "Syra", "lynda");
+		List<String> names2=  Arrays.asList("Adam", "Syra", "lynda"); //you're creating an arrayList using the 2nd technique of creating an arrayList !
 		
 		Stream<String> combined_names= Stream.concat(names1.stream(), names2.stream()).sorted();
 		combined_names.forEach(s->System.out.println(s));

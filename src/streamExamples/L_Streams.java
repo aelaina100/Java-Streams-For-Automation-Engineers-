@@ -23,7 +23,7 @@ public class L_Streams {
 		names[3]= "adam";
     	names[4]= "Ansyn"; */   
 	    
-	    //Note: I've written this program in very few steps. That's the diff. between an Architect and a mere Automation QA where
+	    //Note: I've written this program in very few steps. That's the difference. between an Architect and a mere Automation QA where
 	      // The architect finds solutions + being a high level automation QA Engineer!. These skills will not only help you clear up interviews but
 	       // are also impressive skills under your belt.
 	}
