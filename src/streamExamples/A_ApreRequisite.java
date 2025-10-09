@@ -6,8 +6,8 @@ import org.junit.Assert;
 /*      ******** Note: BEFORE delving into this .java class file, review 'NOTES' file under this 'streamStuff project'.*******
  DO not proceed reviewing this class before doing so with the 'NOTES' file.
  +This file presumes that reader is already well-versed with the examples under 'JavaPkg' situated under the project of 'Java_Programs'
- This specific .java class file utilizes TestNg compiler. This is to have as many testcases inside it instead of seperate creation
- of each testcase utilizing the plain by-default Java compiler. These are merly prerequisite testcases intended to exist in one.java 
+ This specific .java class file utilizes TestNg compiler. This is to have as many test cases inside it instead of separate creation
+ of each test case utilizing the plain by-default Java compiler. These are merely prerequisite test cases intended to exist in one.java 
  class file for the sake of simplicity.
  */
 
@@ -71,6 +71,8 @@ public class A_ApreRequisite {
 	     {
 	    	 System.out.println( "ArrayList contains 'Weak' at the index of: " + arrlist.indexOf("Weak"));}
 	     
+	     
+	     
 	     // 7- What is the index of 'Hardwork'
 	     for(int j=0; j<arr.length; j++)
 	     {
@@ -79,10 +81,10 @@ public class A_ApreRequisite {
 	    	 {
 	    		 System.out.println("Index of 'Hardwork' is: " + j);}}
 	    // Now, another way of optimizing the above lines of code is to convert this array into an arraylist and
-	      // then apply .indextof() method against it (Real-time practice & how it should be).
+	      // then apply .indexof() method against it (Real-time practice & how it should be).
 	     
 	     //8- What is the index of 'Draco" 
-	     int index= arrlist.indexOf("Draco");
+	      int index= arrlist.indexOf("Draco");
 	     System.out.println("Index of 'Draco' is: " + index);
 	     // IMPORTANT:  .indexof() //a method that ONLY exists in "String" & "ArrayList" classes. [returns -1 if the element or character, that we want to find the index of, doesn't exist ]
 	 	 System.out.println("===========================================================================================");

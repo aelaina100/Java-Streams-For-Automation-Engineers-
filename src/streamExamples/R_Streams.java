@@ -33,9 +33,10 @@ ls.stream().filter(s->s.startsWith("R")).sorted().forEach(s->System.out.println(
    //Hence-  the line below proves that 'ls' is ALWAYS the original list of "RONA, ALEKHYA, RAMA"
 System.out.println(ls);   // output with brackets [..,..,..]
 
-// Now below: print out the first element in 'ls'.
+// Now below: print out the first element 'ls'.
 System.out.println("=====================");
-System.out.println(ls.get(0));
+System.out.println(ls.get(0)); // or using streams as shown on the below line:
+ls.stream().limit(1).forEach(s->System.out.println(s)); 
 
 // The next example, S_Streams is this exact same program but without any comments
   

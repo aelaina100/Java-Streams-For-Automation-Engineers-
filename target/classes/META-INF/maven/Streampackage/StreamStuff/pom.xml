@@ -38,7 +38,7 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.10.1</version>
+    <version>7.10.2</version>
      <!--   <scope>test</scope>     
     the Scope line above has been removed. Keeping it= won't see the TestNG jars in the project. and if TestNG runs
     ,then this will be because of the TestNG pluggin that might be of a different version than the TestNG dependecy-->

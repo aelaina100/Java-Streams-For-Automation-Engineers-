@@ -2,7 +2,7 @@ package streamExamples;
 import java.util.ArrayList;
 
 import org.testng.annotations.Test;
-// // 1- Create a variable and place several elements inside of it. Using streams, only print out the first item whose length is greater than 5
+// 1- Create a variable and place several elements inside of it. Using streams, only print out the first item whose length is greater than 5
 
 public class G_Streams {
 	

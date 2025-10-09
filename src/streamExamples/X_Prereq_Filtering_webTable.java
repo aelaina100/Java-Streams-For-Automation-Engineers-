@@ -38,7 +38,7 @@ public class X_Prereq_Filtering_webTable {
 		String ui_product= "rIcE";
 		
 		List<WebElement> webElements= driver.findElements(By.xpath("//tbody/tr/td[1]"));
-		//Now, filter the list of webelements based on text (if filtered, controller will be at that webelement)
+		//Now, filter the list of web elements based on text (if filtered, controller will be at that web element)
 		 // now, move the controller onto the element where the price is stored. This is done utilizing the .MAP()
 		  // function that contains a method containing driver.findElement..(identifying the element), where he price is stored in.
 		   // then, get that price.
@@ -72,8 +72,6 @@ if(product_list.size()==0)
 
 	}
 	
-
-	
 	
 	private WebElement getprice(WebElement s)
 	{
@@ -82,9 +80,9 @@ if(product_list.size()==0)
 	}
 
 }
-// This is done by utlizing the do while statement.
+// This is done by utilizing the do while statement.
 // where the block of the do will always be executed first & at least one time where
-// if while() false, the compliler will exit the loop. other it's going to keep on executing 
+// if while() false, the compiler will exit the loop. other it's going to keep on executing 
 //the do block, until while() return false.
 
    //Next example is the final complete version: Y_final_filtering_webTable
